@@ -1,0 +1,53 @@
+<md-toolbar class="item-header-container">
+
+	<div class="top-bar-container" layout='row' layout-align="start center">
+		  
+		<div flex="70" class="item-details-title" ui-sref="details({id: '4dd32f6ee19f482dbd11b5792ef15a37product326389'})">
+		  <span ng-repeat="h in item.hierarchy">{{h.name === 'Root' ? '' : h.name}} {{$last || $first ? '' : ' > '}}</span>
+		  <span>: {{ item.name }}</span>
+		</div> 
+
+		<div flex="30" layout="row" layout-align="end center">
+		   <img ng-repeat="icon in icons" ng-src="{{icon.thumbnailUrl}}" class="header-icons" ng-click="goToRoute(icon, $event)">
+		</div>
+
+	</div>
+
+	<div layout="row" class="subfolders-container">
+	  <div flex="25" class="md-1-line subfolder-item" ng-repeat="s in subfolders" ng-click="getSubFolder(s.id)">
+	  	<img ng-src="{{s.thumbnailUrl}}" class="md-avatar folder-thumbnails">
+		<h3 class="subfolder-title">{{s.name}}</h3>
+	  </div>
+	</div>
+
+</md-toolbar>
+
+<section layout="column" layout-align="start stretch" class="presentation-container">
+
+	<main id="slide-menu-container" style="background-image: url('{{ item.thumbnailUrl }}'); background-position: center; background-size:contain; background-repeat: no-repeat; display: inline-block; height:100%;">
+
+	</main>
+
+</section>
+
+<div class="footer-item-container" layout="row">
+
+    <div flex="40" class="more-content" ng-click="openDialog($event)">
+    	<span>More: Download Summary</span>
+    </div>
+
+    <div flex="20" class="solutions-content" ng-click="openDialog($event)">
+    	<span>2 Solutions</span>
+    </div>
+
+	<div flex="15" class="references" ng-click="openDialog($event)">
+		<span>References</span>
+	</div>
+
+	<span flex="10"></span>
+
+	<div flex>
+		<img src="common/img/logo.png" class="img-logo">
+	</div>
+
+</div>

@@ -1,0 +1,25 @@
+{
+  "name": "Philips",
+  "authors": [
+    "Scott Sanford <ssanford@mediafly.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.2",
+    "angular-ui-router": "^0.4.2",
+    "angular-material": "^1.1.3",
+    "angular-material-icons": "^0.7.1",
+    "underscore": "^1.8.3",
+    "mfly-commands": "^1.14.0"
+  }
+}

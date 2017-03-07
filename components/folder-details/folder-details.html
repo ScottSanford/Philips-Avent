@@ -1,0 +1,68 @@
+<div class="folder-header-container">
+
+	<div class="top-bar-container" layout='row'>
+	  <span flex="50"></span>
+	  <div flex layout="row" class="folder-details-header-icons-container">
+	    <h2 flex="" class="folder-title" ng-click="showAllItem()"><b>{{folderTitle}}</b></h2>
+	   	<img ng-repeat="icon in icons" 
+	   		 ng-src="{{icon.thumbnailUrl}}" 
+	   		 ng-click="goToRoute(icon, $event)"
+	   		 class="folder-details-header-icons">
+	  </div>
+	</div>
+
+	<div layout="row" class="subfolders-container">
+	  <div flex="25" 
+	  	   layout="row"
+	  	   class="md-1-line subfolder-item" 
+	  	   ng-class="{active : activeMenu === $index}"
+	  	   ng-repeat="s in subfolders" 
+	  	   ng-click="getSubFolder(s.id, $index)">
+
+	  		<img flex="25" ng-src="{{s.thumbnailUrl}}" class="md-avatar folder-thumbnails">
+			<h3 flex="75" class="subfolder-title">{{s.name}}</h3>
+	  </div>
+	</div>
+
+</div>
+
+<div layout="row">
+
+	<div flex="25" class="filter-container">
+		<div class="filter-title">
+			<img src="common/img/mom.png">
+			<div>Mother's Health</div>
+		</div>
+
+
+		<md-list class="margin-left-25">
+		  <md-list-item class="md-1-line filter-item" ng-repeat="m in mother" ui-sref="item({parentFolder:folderTitle, id: m.id})">
+		    <md-truncate class="md-ellipsis item-name">
+		      <span>{{m.name}}</span>
+		    </md-truncate>
+		  	<!-- <img ng-src="{{m.thumbnailUrl}}" class="md-avatar item-thumbnail"> -->
+		  </md-list-item>
+		</md-list>
+	</div>
+
+	<div flex="25" class="filter-container">
+		<div class="filter-title">
+			<img src="common/img/baby.png">
+			<div>Baby's Health</div>
+		</div>
+
+		<md-list class="margin-left-25">
+		  <md-list-item class="md-1-line filter-item" ng-repeat="b in baby" ui-sref="item({parentFolder:folderTitle, id: b.id})">
+		    <md-truncate class="md-ellipsis item-name">
+		      <span>{{b.name}}</span>
+		    </md-truncate>
+		  	<!-- <img ng-src="{{b.thumbnailUrl}}" class="md-avatar item-thumbnail"> -->
+		  </md-list-item>
+		</md-list>
+	</div>
+
+</div>
+
+
+<img class="folder-details-logo" src="common/img/logo.png">
+

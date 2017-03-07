@@ -1,0 +1,54 @@
+<div class="parent-container">
+	
+	<div class="close-btn" ng-click="closeInt()">
+		<ng-md-icon icon="close" style="fill:#FFF" size="40"></ng-md-icon> 
+	</div>
+
+	<div layout="row">
+		<span flex="5"></span>
+		<div flex class="parent-title">How can we support you?</div>
+	</div>
+
+	<div layout="row">
+		<div layout="column" flex="55">
+			<md-list class="margin-left-25">
+			  <md-list-item class="md-1-line folder-list-item" ng-repeat="folder in folders | orderBy: 'id'" ng-click="goToFolderDetails(folder, $event)">
+			  	<img ng-src="{{folder.thumbnailUrl}}" class="md-avatar folder-thumbnails">
+			    <div class="md-list-item-text">
+			      <h3 >{{folder.name}}</h3>
+			    </div>
+			  </md-list-item>
+			</md-list>
+		</div>
+
+		<div flex="40">
+		  	<div class="right-side">
+		  		<md-select placeholder="Select a Location" ng-model="user">
+			      <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+			    </md-select>
+
+				<md-content flex layout-padding class="sel-hospital-container" ng-show="user">
+			        <div class="sel-hospital">{{ user.doctors }} doctors</div>
+			    </md-content>
+			    <md-content flex layout-padding class="sel-hospital-container" ng-show="user">
+			        <div class="sel-hospital">{{ user.nurses }} nurses</div>
+			    </md-content>
+			    <md-content flex layout-padding class="sel-hospital-container" ng-show="user">
+			        <div class="sel-hospital">{{ user.births }} births last year</div>
+			    </md-content>
+
+			    <md-list class="about-us-container">
+				  <md-list-item class="md-1-line folder-list-item" ng-repeat="a in about" ng-click="openDialog()">
+				  	<img ng-src="{{a.thumbnailUrl}}" class="md-avatar folder-thumbnails">
+				    <div class="md-list-item-text">
+				      <h3 >{{a.name}}</h3>
+				    </div>
+				  </md-list-item>
+				</md-list>
+		       
+		  	</div>
+		</div>
+		<span flex="5"></span>
+	</div>
+
+</div>

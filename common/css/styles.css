@@ -1,0 +1,252 @@
+/*===================================================
+
+				Global Styles
+
+====================================================*/
+.margin-top-25 {
+	margin-top:25px;
+}
+
+.margin-left-25 {
+	margin-left:25px;
+}
+
+* {
+	outline:0;
+}
+
+/*===================================================
+
+				Parent Styles
+
+====================================================*/
+.close-btn {
+	/*border:1px solid red;*/
+	position: absolute;
+	top:0;
+	right:0;
+	width:50px;
+	height:50px;
+}
+
+
+.parent-container {
+	background: #631d75; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #631d75 0%, #7c0163 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  #631d75 0%,#7c0163 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  #631d75 0%,#7c0163 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#631d75', endColorstr='#7c0163',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	width:100%;
+	height:100vh;
+}
+
+.parent-title {
+	font-size:60px;
+	color:#FFF;
+	margin-top:50px;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+md-list-item.folder-list-item {
+	padding:10px;
+}
+
+md-list-item .md-avatar.folder-thumbnails {
+	width:75px;
+	height:75px;
+}
+
+md-list-item .md-list-item-text {
+	color:#FFF;
+	font-size:30px;
+}
+
+.folder-title {
+	font-size:26px;
+}
+
+.right-side {
+	margin-top:50px;
+}
+
+
+md-select {
+	background-color:#FFF;
+	padding:10px;
+	font-size:20px;
+	border-radius: 10px
+}
+
+md-content.sel-hospital-container {
+	border-radius: 10px;
+	border:3px solid #B660C4;
+	margin-top:25px;
+}
+
+.sel-hospital {
+	padding:10px;
+	font-size:30px;
+	text-align: center;
+}
+
+.about-us-container {
+	position: absolute;
+	bottom:0;
+	right:50px;
+}
+
+/*===================================================
+
+				Folder Details Styles
+
+====================================================*/
+.folder-header-container {
+	border-bottom:3px solid #004875;
+	background-color:#6F2F9F;
+	height:150px;
+	color:#FFF;
+}
+
+.folder-details-header-icons {
+	width:50px;
+	height:50px;
+	padding:10px;
+	cursor: pointer;
+}
+
+.subfolder-item {
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	height:70px;
+}
+
+.active {
+	border-bottom:2px solid #FFF;
+}
+
+.subfolder-title {
+	display: inline-block;
+	vertical-align: middle;
+	height:50px;
+	font-size:24px;
+	margin-left:10px;
+}
+
+.filter-container {
+	text-align: center;
+	margin-top:25px;
+	color:#7E7E7E;
+	font-size:20px;
+	font-weight: bold;
+}
+
+.filter-title div {
+	display:inline-block;
+	vertical-align: top;
+}
+
+md-list-item.md-no-proxy {
+	padding:0;
+}
+
+.filter-item {
+	border-bottom:2px solid #481A64;
+}
+
+md-truncate.item-name {
+	width:100%; 
+	font-size:16px
+}
+
+.folder-details-logo {
+	height:75px;
+	position: absolute;
+	bottom:0;
+	left:0;
+}
+
+/*===================================================
+
+				Item Details Styles
+
+====================================================*/
+md-toolbar.item-header-container {
+	position: fixed;
+	top:0;
+	left:0;
+	background-color:#6F2F9F;
+	color:#FFF;
+}
+
+.item-details-title {
+	font-size:20px;
+	margin-left:15px;
+	cursor: pointer;
+}
+
+.header-icons {
+	width:60px;
+	height:60px;
+	padding:7px;
+	cursor: pointer;
+}
+
+.presentation-container {
+	height: 100vh;
+	background-color:#FFF;
+	box-sizing: border-box;
+	padding:64px 0;
+}
+
+.footer-item-container {
+	position: fixed;
+	bottom:0;
+	height:60px;
+	width:100%;
+}
+
+.more-content {
+	background-color: #6F2F9F;
+	color:#FFF;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding:10px;
+	padding-top:20px;
+	margin-left:10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.solutions-content {
+	background-color:#E98300;
+	color:#FFF;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding:10px;
+	text-align: center;
+	padding-top:20px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.references {
+	background-color:#ECA9AA;
+	color:#FFF;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding:10px;
+	text-align: center;
+	padding-top:20px;
+	margin-left:10px;
+	cursor: pointer;
+}
+
+.img-logo {
+	width:200%;
+}
+
+.background-purple {
+	background-color:#6F2F9F;
+}
